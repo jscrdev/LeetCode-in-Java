@@ -21,6 +21,7 @@ public class Solution {
                     break;
                 }
             }
+
             if (count == 1) {
                 sum += tmpSum;
             }
