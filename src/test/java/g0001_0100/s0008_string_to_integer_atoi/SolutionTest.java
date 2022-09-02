@@ -30,4 +30,19 @@ class SolutionTest {
     void myAtoi5() {
         assertThat(new Solution().myAtoi("-91283472332"), equalTo(-2147483648));
     }
+
+    @Test
+    void myAtoi6() {
+        assertThat(new Solution().myAtoi(""), equalTo(0));
+    }
+
+    @Test
+    void myAtoi7() {
+        assertThat(new Solution().myAtoi(" "), equalTo(0));
+    }
+
+    @Test
+    void myAtoi8() {
+        assertThat(new Solution().myAtoi("+91283472"), equalTo(91283472));
+    }
 }
