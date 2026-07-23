@@ -3,6 +3,11 @@ package g1301_1400.s1348_tweet_counts_per_frequency;
 // #Medium #Hash_Table #Sorting #Binary_Search #Design #Ordered_Set
 // #2026_07_23_Time_95_ms_(84.25%)_Space_56.94_MB_(55.48%)
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class TweetCounts {
 
     private static class TreeNode {
