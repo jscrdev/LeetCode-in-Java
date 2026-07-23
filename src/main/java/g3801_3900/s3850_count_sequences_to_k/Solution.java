@@ -6,6 +6,7 @@ package g3801_3900.s3850_count_sequences_to_k;
 import java.util.HashMap;
 import java.util.Map;
 
+@SuppressWarnings("unchecked")
 public class Solution {
 
     private Map<Double, Integer>[] dp;
