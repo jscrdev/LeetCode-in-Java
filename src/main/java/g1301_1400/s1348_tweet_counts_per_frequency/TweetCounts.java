@@ -74,7 +74,6 @@ public class TweetCounts {
         if (start <= end) {
             int count = treverse(root, start, end + 1);
             res.add(count);
-            start = end + 1;
         }
         return res;
     }
