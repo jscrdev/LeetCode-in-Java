@@ -1,10 +1,10 @@
 package g3701_3800.s3733_minimum_time_to_complete_all_deliveries;
 
 // #Medium #Math #Binary_Search #Weekly_Contest_474
-// #2025_11_05_Time_1_ms_(100.00%)_Space_44.16_MB_(55.61%)
+// #2026_07_23_Time_1_ms_(100.00%)_Space_43.99_MB_(84.21%)
 
 public class Solution {
-    private boolean pos(long k, long n1, long n2, int p1, int p2, long lVal) {
+    private boolean isPossible(long k, long n1, long n2, int p1, int p2, long lVal) {
         long kP1 = k / p1;
         long kP2 = k / p2;
         long kL = k / lVal;
@@ -17,10 +17,14 @@ public class Solution {
     }
 
     private long findGcd(long a, long b) {
-        if (b == 0) {
-            return a;
+        long x = a;
+        long y = b;
+        while (y != 0) {
+            long temp = y;
+            y = x % y;
+            x = temp;
         }
-        return findGcd(b, a % b);
+        return x;
     }
 
     public long minimumTime(int[] d, int[] r) {
@@ -35,7 +39,7 @@ public class Solution {
         long res = hi;
         while (lo <= hi) {
             long mid = lo + (hi - lo) / 2;
-            if (pos(mid, n1, n2, p1, p2, l)) {
+            if (isPossible(mid, n1, n2, p1, p2, l)) {
                 res = mid;
                 hi = mid - 1;
             } else {
