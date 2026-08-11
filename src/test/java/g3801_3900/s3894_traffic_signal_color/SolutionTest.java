@@ -25,4 +25,9 @@ class SolutionTest {
     void trafficSignal4() {
         assertThat(new Solution().trafficSignal(30), equalTo("Orange"));
     }
+
+    @Test
+    void trafficSignal5() {
+        assertThat(new Solution().trafficSignal(100), equalTo("Invalid"));
+    }
 }
