@@ -6,13 +6,13 @@ package g3801_3900.s3897_maximum_value_of_concatenated_binary_segments;
 public class Solution {
     private static final int MOD = (int) 1e9 + 7;
     private static final int N = 10001;
-    private static final int[] pow2 = new int[N];
+    private static final int[] POW2 = new int[N];
 
     public int maxValue(int[] nums1, int[] nums0) {
-        if (pow2[0] == 0) {
-            pow2[0] = 1;
+        if (POW2[0] == 0) {
+            POW2[0] = 1;
             for (int i = 1; i < N; i++) {
-                pow2[i] = pow2[i - 1] * 2 % MOD;
+                POW2[i] = POW2[i - 1] * 2 % MOD;
             }
         }
         int n = nums0.length;
@@ -36,9 +36,8 @@ public class Solution {
             int index = indices[i];
             int count1 = nums1[index];
             int count0 = nums0[index];
-            ans = (ans * pow2[count1] + pow2[count1] - 1) % MOD * pow2[count0] % MOD;
+            ans = (ans * POW2[count1] + POW2[count1] - 1) % MOD * POW2[count0] % MOD;
         }
-
         return (int) ans;
     }
 
