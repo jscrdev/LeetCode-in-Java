@@ -10,13 +10,14 @@ public class Solution {
     private static final int N = 10001;
     private static final int[] POW2 = new int[N];
 
-    public int maxValue(int[] nums1, int[] nums0) {
-        if (POW2[0] == 0) {
-            POW2[0] = 1;
-            for (int i = 1; i < N; i++) {
-                POW2[i] = POW2[i - 1] * 2 % MOD;
-            }
+    static {
+        POW2[0] = 1;
+        for (int i = 1; i < N; i++) {
+            POW2[i] = POW2[i - 1] * 2 % MOD;
         }
+    }
+
+    public int maxValue(int[] nums1, int[] nums0) {
         int n = nums0.length;
         Integer[] indices = new Integer[n];
         int size = 0;
