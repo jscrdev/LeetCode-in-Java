@@ -3,6 +3,8 @@ package g3801_3900.s3897_maximum_value_of_concatenated_binary_segments;
 // #Hard #Array #Sorting #Greedy #Senior_Staff #Biweekly_Contest_180
 // #2026_08_13_Time_12_ms_(100.00%)_Space_104.12_MB_(56.00%)
 
+import java.util.Arrays;
+
 public class Solution {
     private static final int MOD = (int) 1e9 + 7;
     private static final int N = 10001;
